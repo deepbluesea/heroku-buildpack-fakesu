@@ -45,9 +45,10 @@ echo "-----> Fetching and installing debootstrap"
 cd $DEBOOTSTRAP_BUILD
 
 wget http://free.nchc.org.tw/drbl/pool/drbl/live-testing/debootstrap/debootstrap_1.0.55.tar.gz >/dev/null 2>&1
-tar zxvf debootstrap_1.0.55.tar.gz >/dev/null
+tar zxvf debootstrap-1.0.55.tar.gz >/dev/null
 ls
-cd debootstrap_1.0.55
+cd debootstrap-1.0.55
+ls
 DESTDIR=$CACHE_DIR/.tools/debootstrap fakeroot make >/dev/null
 DESTDIR=$CACHE_DIR/.tools/debootstrap fakeroot make install >/dev/null
 echo "debootstrap installed" | indent
